@@ -15,10 +15,12 @@ class SongsController < ApplicationController
         end
     end
 
+    def index
+        @songs = Song.all
+    end
 
     private
         def songs_params
             params.require(:song).permit(:title, :singer,  :genre, :picture)
         end
-
 end
