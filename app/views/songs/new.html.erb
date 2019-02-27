@@ -1,6 +1,6 @@
 <h1>Add A New Song</h1>
 
-<%= form_for @picture do |f| %>
+<%= form_for @song do |f| %>
     <p>
         <%= f.label :title %><br>
         <%= f.text_field :title %>
@@ -20,5 +20,7 @@
         <%= f.label :picture %><br>
         <%= f.text_field :picture %>
     </p>
-    <p><%= f.submit "Save" %> 
+        <p><%= f.submit "Save" %> 
     </p>
+
+    <%= link_to "Back to Songs", "/songs" %>
