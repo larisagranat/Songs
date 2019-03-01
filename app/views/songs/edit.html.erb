@@ -1,0 +1,32 @@
+<h1> Edit Song <h1>
+<p>
+ <%= link_to "Back", @song%> 
+</p>
+
+<%= form_for @song do |s| %>
+
+<p>
+<%= s.label :title%><br>
+<%= s.text_field :title%>
+</p>
+
+<p>
+<%=s.label :singer %><br>
+<%=s.text_field :singer %>
+</p>
+
+<p>
+<%=s.label :genre %><br>
+<%= s.text_field :genre %>
+</p>
+
+<p>
+<%=s.label  :picture %><br>
+<%=s.text_field :picture %>
+</p>
+
+<p>
+<%= s.submit%>
+</p>
+
+<%end%>
