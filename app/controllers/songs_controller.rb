@@ -20,11 +20,6 @@ class SongsController < ApplicationController
     end
 
 
-    private
-        def songs_params
-            params.require(:song).permit(:title, :singer,  :genre, :picture)
-        end
-
     def show
         @song = Song.find(params[:id])
       end
@@ -45,6 +40,9 @@ class SongsController < ApplicationController
 
     end
         
-
+    private
+    def songs_params
+        params.require(:song).permit(:title, :singer,  :genre, :picture)
+    end
 
 end
